@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom"
-import { Search, Settings } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
-const navItems = [
-  { label: "Overview", to: "/" },
-  { label: "Workflows", to: "/" },
-  { label: "Insights", to: "/" },
-]
 
 export function Header() {
   return (
@@ -21,58 +16,15 @@ export function Header() {
               Maswada AI
             </Link>
             <span className="hidden text-xs text-muted-foreground sm:inline">
-              Glassmorphism UI
+              Smart Notes with AI
             </span>
           </div>
-
-          <nav
-            aria-label="Primary"
-            className="hidden items-center gap-4 text-xs font-medium text-muted-foreground sm:flex"
-          >
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.to}
-                className="transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="glass-border inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition hover:text-foreground"
-              aria-label="Search"
-            >
-              <Search className="h-4 w-4" />
-            </button>
-            <button
-              type="button"
-              className="glass-border inline-flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition hover:text-foreground"
-              aria-label="Settings"
-            >
-              <Settings className="h-4 w-4" />
-            </button>
+            <Button variant="outline" size="sm" className="rounded-md" aria-label="العربية">
+              العربية
+            </Button>
           </div>
         </div>
-        
-        {/* Mobile navigation */}
-        <nav
-          aria-label="Primary mobile"
-          className="mt-3 flex items-center gap-3 text-xs font-medium text-muted-foreground sm:hidden"
-        >
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              className="glass-border rounded-full px-3 py-1 transition-colors hover:text-foreground"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
       </div>
     </header>
   )
