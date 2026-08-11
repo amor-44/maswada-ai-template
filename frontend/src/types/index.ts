@@ -7,3 +7,8 @@ export type Note = {
     createdAt: Date;
     updatedAt: Date;
 }
+
+export type CreateNoteData = {
+    title: string
+    content: string
+}

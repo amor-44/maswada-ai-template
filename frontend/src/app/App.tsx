@@ -5,6 +5,7 @@ import { HomePage } from "@/app/pages/HomePage"
 import { NotFoundPage } from "@/app/pages/NotFoundPage"
 import { SignInPage } from "@/app/pages/SignInPage"
 import { SignUpPage } from "@/app/pages/SignUpPage"
+import { NoteDetailPage } from "@/app/pages/NoteDetailPage"
 
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 
         <Route element={<AppLayout />}>
           <Route path="/" element={<HomePage />} />
+          <Route path="/notes/:id" element={<NoteDetailPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
