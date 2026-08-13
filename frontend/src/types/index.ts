@@ -17,3 +17,5 @@ export type UpdatedNoteData = {
     title?: string
     content?: string
 }
+
+export type AutoSaveState = "initial" | "saved" | "saving" | "unsaved";

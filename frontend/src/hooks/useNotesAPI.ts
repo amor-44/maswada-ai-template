@@ -84,6 +84,10 @@ function useNotesAPI() {
       },
       body: JSON.stringify(note)
     })
+    if (!res.ok) {
+      console.error("Failed to update note:", res)
+      return null
+    }
     const data:{note:Note} = await res.json()
     return data.note
   }
