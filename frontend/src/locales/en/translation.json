@@ -1,0 +1,65 @@
+{
+  "header": {
+    "brand": "Maswada AI",
+    "tagline": "Smart Notes with AI",
+    "langToggle": "العربية",
+    "signIn": "Sign In"
+  },
+  "footer": {
+    "rights": "All rights reserved, Amr Hesham"
+  },
+  "home": {
+    "title": "My Notes",
+    "createNote": "New Note",
+    "searchPlaceholder": "Search notes...",
+    "emptyState": "No notes yet. Create your first one!"
+  },
+  "noteDetail": {
+    "back": "Back",
+    "titlePlaceholder": "Untitled Note",
+    "contentPlaceholder": "Start writing your note...",
+    "translate": "Translate",
+    "summarize": "Summarize",
+    "loading": "Loading...",
+    "translatedSuccess": "Note translated successfully",
+    "summarizedSuccess": "Note summarized successfully",
+    "deleteSuccess": "Note deleted successfully",
+    "deleteError": "Failed to delete note",
+    "saveError": "Failed to save changes",
+    "save": "Save",
+    "saving": "Saving...",
+    "unsavedPrompt": "You have unsaved changes. Are you sure you want to leave?",
+    "aiActions": "AI Actions"
+  },
+  "autoSave": {
+    "saving": "Saving...",
+    "saved": "Saved Successfully",
+    "unsaved": "Unsaved Changes"
+  },
+  "deleteDialog": {
+    "deleteNote": "Delete Note?",
+    "title": "Delete note?",
+    "description": "This will permanently delete this note.",
+    "cancel": "Cancel",
+    "confirm": "Confirm Delete"
+  },
+  "notFound": {
+    "title": "This page drifted away",
+    "description": "The route you are looking for does not exist yet.",
+    "backHome": "Back to home"
+  },
+  "ai": {
+    "disabledMessage": "🤖 AI features are currently disabled in the public demo. They were implemented as part of the learning process and require an active AI API."
+  },
+  "auth": {
+    "signingIn": "Signing in...",
+    "signUp": "Sign Up"
+  },
+  "errors": {
+    "saveFailed": "Failed to save changes",
+    "deleteFailed": "Failed to delete note",
+    "translateFailed": "Translation failed. Please try again.",
+    "summarizeFailed": "Summary generation failed. Please try again.",
+    "rewriteFailed": "Rewrite failed. Please try again."
+  }
+}

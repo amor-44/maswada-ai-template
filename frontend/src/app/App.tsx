@@ -6,6 +6,8 @@ import { NotFoundPage } from "@/app/pages/NotFoundPage"
 import { SignInPage } from "@/app/pages/SignInPage"
 import { SignUpPage } from "@/app/pages/SignUpPage"
 import { NoteDetailPage } from "@/app/pages/NoteDetailPage"
+import { ProtectedRoute } from "@/components/common/ProtectedRoute"
+
 
 
 export default function App() {
@@ -15,7 +17,7 @@ export default function App() {
         <Route path="/sign-in/*" element={<SignInPage />} />
         <Route path="/sign-up/*" element={<SignUpPage />} />
 
-        <Route element={<AppLayout />}>
+        <Route element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
           <Route path="/" element={<HomePage />} />
           <Route path="/notes/:id" element={<NoteDetailPage />} />
           <Route path="*" element={<NotFoundPage />} />

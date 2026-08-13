@@ -19,3 +19,20 @@ export type UpdatedNoteData = {
 }
 
 export type AutoSaveState = "initial" | "saved" | "saving" | "unsaved";
+
+
+
+export type TranslateInput ={
+    noteId?: string;
+    text?:string;
+}
+
+export type TranslateOutput ={
+    result: string;
+}
+
+export type SummarizeInput = {
+    noteId?: string;
+    text?:string;
+}
+
