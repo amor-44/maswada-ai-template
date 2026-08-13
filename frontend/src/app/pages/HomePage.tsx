@@ -6,22 +6,36 @@ import { useEffect, useState } from "react"
 import useNotesAPI from "@/hooks/useNotesAPI"
 import type { Note } from "@/types"
 import { useNavigate } from "react-router-dom"
-
-
+import { useAuth } from "@clerk/react"
 
 
 export function HomePage() {
-  const {getAllNotes,createNote} = useNotesAPI()
+  const { isLoaded, isSignedIn } = useAuth()
+  const { getAllNotes, createNote } = useNotesAPI()
   const [notes, setNotes] = useState<Note[]>([])
   const navigate = useNavigate()
 
+  // Redirect to sign-in if not authenticated
   useEffect(() => {
+    if (isLoaded && !isSignedIn) {
+      navigate("/sign-in")
+    }
+  }, [isLoaded, isSignedIn, navigate])
+
+  useEffect(() => {
+    if (!isSignedIn) return
     const fetchNotes = async () => {
-      const result = await getAllNotes()
-      setNotes(result ?? [])
+      try {
+        const result = await getAllNotes()
+        setNotes(result ?? [])
+      } catch (err) {
+        console.error("Failed to fetch notes:", err)
+        setNotes([])
+      }
     }
     fetchNotes()
-  }, [getAllNotes])
+  }, [getAllNotes, isSignedIn])
+
 
   const handleCreateNote = async () => {
 
